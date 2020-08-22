@@ -28,3 +28,25 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 You can then execute your native executable with: `./target/tutorial-app-1.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/building-native-image.
+
+## Building an image
+
+https://quarkus.io/guides/container-image
+
+### Building
+Install appropriate extension
+`./mvnw quarkus:add-extension -Dextensions="container-image-docker"`
+
+Configure which extension should run to build image om application.properties
+`quarkus.container-image.builder=docker`
+
+or remove if doesn't work
+`./mvnw quarkus:add-extension -Dextensions="container-image-jib"`
+
+### Pushing
+Remember to setup all the necessary dependencies on your registry, for docker.io just create a new repository with the application name
+
+Set `DOCKER_USER` and `DOCKER_PASSWD` environment variables to your docker.io credentials (on linux `export` both variables).
+
+Push the image 
+`./mvnw clean package -Dquarkus.container-image.push=true`
