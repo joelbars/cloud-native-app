@@ -1,4 +1,4 @@
-package com.github.joelbars;
+package com.github.joelbars.resource;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;

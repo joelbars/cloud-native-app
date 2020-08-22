@@ -1,0 +1,10 @@
+version: '1'
+services:
+    web:
+        image: joelbars/quarkusnative:snapshot
+        ports: 
+            - "8081:8081"
+    aluno:
+        image: "marcelormourao/uni7-cloud-native:1.0.0"
+        ports: 
+            - "8080:8080"

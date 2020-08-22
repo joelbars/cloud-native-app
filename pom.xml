@@ -68,15 +68,19 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-container-image-docker</artifactId>
     </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
+    </dependency>
   </dependencies>
   <build>
-    <finalName>cloud-native-app</finalName>
     <resources>
       <resource>
-        <directory>src/main/resources</directory>
         <filtering>true</filtering>
+        <directory>src/main/resources</directory>
       </resource>
     </resources>
+    <finalName>cloud-native-app</finalName>
     <plugins>
       <plugin>
         <groupId>io.quarkus</groupId>

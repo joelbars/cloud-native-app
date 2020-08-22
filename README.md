@@ -44,9 +44,13 @@ or remove if doesn't work
 `./mvnw quarkus:add-extension -Dextensions="container-image-jib"`
 
 ### Pushing
-Remember to setup all the necessary dependencies on your registry, for docker.io just create a new repository with the application name
+Remember to setup all the necessary dependencies on your registry, for docker.io just create a new repository with the application name.
 
 Set `DOCKER_USER` and `DOCKER_PASSWD` environment variables to your docker.io credentials (on linux `export` both variables).
 
 Push the image 
 `./mvnw clean package -Dquarkus.container-image.push=true`
+
+
+#### Docker image for this project
+Docker image are available at [DockerHub](https://hub.docker.com/r/joelbars/quarkusnative).

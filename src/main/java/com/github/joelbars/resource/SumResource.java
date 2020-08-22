@@ -1,4 +1,4 @@
-package com.github.joelbars;
+package com.github.joelbars.resource;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
